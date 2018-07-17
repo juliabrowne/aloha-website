@@ -1,5 +1,5 @@
 # Aloha Project
 
-Single-page website built using HTML5 and CSS3. Depicts a fictional clothing brand and includes interactive header navigation and jQuery carousel.
+Single-page website built using HTML5 and CSS3. Depicts a fictional clothing brand and includes interactive header navigation and jQuery carousel feature.
 
 First project created at Red Academy.
