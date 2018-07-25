@@ -2,6 +2,13 @@
 
 $(document).ready(function () {
 
+  $(function() {
+    $("a[href^='#']").not("a[href='#']").click(function() {
+       $("#"+$(this).attr("href").slice(1)+"").focus();
+    });
+ });
+
+
   $(".add-to-cart").click(function () {
     // itemCount++;
     $("#itemCount").css({
@@ -38,7 +45,7 @@ $(document).ready(function () {
           // Only prevent default if animation is actually gonna happen
           event.preventDefault();
           $('html, body').animate({
-            scrollTop: target.offset().top
+            scrollTop: target.offset().top - 100
           }, 1000, function () {
             // Callback after animation
             // Must change focus!

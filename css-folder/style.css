@@ -1,18 +1,41 @@
- html {
-     font-size: 14px;
- }
-
  /* 
     html {
         scroll-behavior: smooth;
     } */
+
+ /* #main[tabindex="-1"]:focus {
+     outline: 0;
+ } */
+
+ .screen-reader-text {
+     clip: rect(1px, 1px, 1px, 1px);
+     position: absolute !important;
+     height: 1px;
+     width: 1px;
+     overflow: hidden;
+ }
+
+ .screen-reader-text:focus {
+     clip: auto !important;
+     display: block;
+     height: auto;
+     left: 5px;
+     top: 5px;
+     width: auto;
+     z-index: 100000;
+     /* above all content */
+ }
+
+ html {
+     font-size: 14px;
+ }
 
  body {
      background: white;
      font-family: "Raleway", "Lucida Sans Unicode", Verdana, sans-serif;
      color: #2d2d2d;
      text-align: justify;
-     line-height: 1.2 color: black;
+     line-height: 1.2;
      padding: 0px;
      margin: 0;
  }
