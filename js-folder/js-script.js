@@ -20,6 +20,27 @@ $(document).ready(function () {
   });
 
 
+ $('.submit-button').click(function(e) {
+    e.preventDefault();
+
+    var subEmail = $('#subscribe-form').val();
+    if (validateEmail(subEmail)) {
+      alert('Thank you for subscribing!');
+    } else {
+      alert('Please enter a valid email.');
+    }
+  });
+});
+
+function validateEmail(subEmail) {
+  var filter = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+  if (filter.test(subEmail)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
   $('.main-carousel').flickity({
     // options
     cellAlign: 'center',
